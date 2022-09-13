@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+
+<script>
+	function novaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostraConteudo(texto){
+		document.write(texto);
+		novaLinha();
+	}
+
+	var numeros = 30;
+
+
+	while (numeros < 40){
+		if (numeros == 33) {
+			numeros = numeros + 1;
+		} else if (numeros == 37) {
+			numeros = numeros + 1;
+		} else {
+			mostraConteudo(numeros);
+			numeros = numeros + 1;
+		}
+	}
+
+</script>

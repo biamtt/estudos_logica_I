@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script>
+	function novaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostraTexto(texto){
+		document.write(texto);
+		novaLinha();
+	}
+
+	let multiplicador = 1;
+
+	while(multiplicador <= 10){
+		mostraTexto(7 * multiplicador);
+		multiplicador = multiplicador + 1;
+	}
+
+	mostraTexto("Fim!")
+
+</script>

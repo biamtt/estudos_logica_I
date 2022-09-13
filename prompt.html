@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+
+<script>
+
+	function novaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostraConteudo(frase){
+		document.write(frase);
+		novaLinha();
+	}
+
+	function calculaIMC(altura, peso){
+		return peso / (altura * altura);
+	}
+
+	let nome = prompt("Olá, vamos começar! Qual seu nome?");
+	
+	function validarNome(){
+		if (nome == ''){
+			alert('Ops, parece que você não digitou seu nome.');
+		}
+	}
+
+	validarNome();	
+	let alturaInformada = prompt(nome + ", informe sua altura");
+	let pesoInformado = prompt(nome + ", agora informe seu peso");
+
+	let imc = calculaIMC(alturaInformada, pesoInformado);
+
+	if (imc < 18.5) {
+		mostraConteudo(nome + ", seu IMC é de " + imc.toFixed(1) + ". <br> Você está <b>ABAIXO DO PESO</b>. Bora comer arroz e feijão!!");
+	} else if (imc < 24.9){
+		mostraConteudo(nome + ", seu IMC é de " + imc.toFixed(1) + ". <br> Você está <b>NA MEDIDA</b>!! Parabéns e bora continuar no equilíbrio!!");
+	} else if (imc < 29.9){
+		mostraConteudo(nome + ", seu IMC é de " + imc.toFixed(1) + ". <br> Você está no <b>SOBREPESO</b>!! Que tal umas caminhadas extras pra equilibrar?");
+	} else if (imc < 34.9){
+		mostraConteudo(nome + ", seu IMC é de " + imc.toFixed(1) + ". <br> Você está no nível de <b>OBESIDADE I</b>!! Uma revisada na alimentação, combinada de caminhadas já ajudam à equilibrar!!");
+	} else if (imc < 39.9){
+		mostraConteudo(nome + ", seu IMC é de " + imc.toFixed(1) + ". <br> Você está no nível de <b>OESIDADE II</b>!! Vamos mudar isso? Ânimo e persistência para uma vida longa!!");
+	} else if (imc >= 40){
+		mostraConteudo(nome + ", seu IMC é de " + imc.toFixed(1) + ". <br> Você está no nível de <b>OBESIDADE III / MÓRBIDA</b>!! Uma passada no médico pra bolar um plano de reversão é uma boa!!");
+	}
+
+</script>

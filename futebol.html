@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script>
+	
+	function novaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostraConteudo(frase){
+		document.write(frase);
+		novaLinha();
+	}
+
+	let vitorias = parseInt(prompt("Entre com o número de vitórias"));
+	let empates = parseInt(prompt("Entre com o número de empates"));
+	let pontos = (vitorias * 3) + empates;
+
+	mostraConteudo("Seu time tem " + pontos + "pontos!");
+
+</script>

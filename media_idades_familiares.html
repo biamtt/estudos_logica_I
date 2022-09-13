@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<script>
+	function novaLinha(){
+		document.write("<br><br>");
+	}
+	function mostraTexto(texto){
+		document.write(texto);
+		novaLinha();
+	}
+
+	let nomes = ["Pedro", "Marta", "Jorge", "Bete"];
+	let idades = [28, 32, 60, 22];
+
+	let soma = idades.reduce(function(soma, i){
+		return soma + i;
+	})
+
+	mostraTexto(soma/nomes.length);
+
+</script>
